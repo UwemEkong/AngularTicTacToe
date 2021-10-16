@@ -1,0 +1,27 @@
+.square-container {
+  width:205px;
+  height:200px;
+  border: solid black;
+  font-weight:bold;
+  color:blue;
+  padding-right:0px;
+  cursor: pointer;
+}
+
+.square-text-container {
+  border:solid black;
+}
+
+h2 {
+  text-align: center;
+  vertical-align: middle;
+  font-size:100px
+}
+.custom-btn {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  outline: inherit;
+}

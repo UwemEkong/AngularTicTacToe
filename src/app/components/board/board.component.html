@@ -1,0 +1,18 @@
+<div [ngClass]="{'row row-custom' : this.checkWinnerService.winnerMessage, 'container-fluid': !this.checkWinnerService.winnerMessage}">
+  <div class="col">
+    <div (click)="this.checkWinnerService.updateTurn()" class="board-container">
+      <div class="row">
+        <app-square (squareClickEvent)="this.checkWinnerService.updateBoard($event)"  *ngFor="let number of this.boardSize; index as i;" [turn]="this.checkWinnerService.turn" [row]="i" [col]="0"></app-square>
+      </div>
+      <div class="row">
+        <app-square (squareClickEvent)="this.checkWinnerService.updateBoard($event)" *ngFor="let number of this.boardSize; index as i;" [turn]="this.checkWinnerService.turn" [row]=i [col]="1"></app-square>
+      </div>
+      <div class="row">
+        <app-square (squareClickEvent)="this.checkWinnerService.updateBoard($event)" *ngFor="let number of this.boardSize; index as i;" [turn]="this.checkWinnerService.turn" [row]="i" [col]="2"></app-square>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="winner-message">{{this.checkWinnerService.winnerMessage}}<button (click)="this.checkWinnerService.resetGame()" class="btn btn-success my-button" [style.display]="this.checkWinnerService.winnerMessage ? 'block' : 'none'">Reset Game</button></div>
+  </div>
+</div>
